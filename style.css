@@ -34,6 +34,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     
 }
 
@@ -44,9 +45,9 @@ body{
     padding: 20px;
     display: flex;
     justify-content: center;
-    justify-self: center;
     align-self: center;
-    min-width: 1500px;
+    max-width: 1300px;
+    min-width: 300px;
     background-color: var(--very-light-grayish-blue);
 }
 
@@ -58,7 +59,7 @@ body{
     align-items: center;
     margin: 20px;
     padding: 20px;
-    min-width: 900px;
+    max-width: 800px;
     border-radius: 15px;
     background-color:var(--white) ;
 }
@@ -97,8 +98,16 @@ body{
     color: var(--grayish-blue);
     font-weight: bold;
 }
-
+#mark-all-unread{
+    color: var(--grayish-blue);
+    font-weight: bold;
+}
 #mark-all-read:hover{
+    cursor: pointer;
+    color: var(--blue);
+}
+#mark-all-unread:hover{
+    cursor: pointer;
     color: var(--blue);
 }
 
@@ -130,32 +139,8 @@ body{
 .user-name{
     color: var(--dark-grayish-blue);
 }
-
-#user-name-1:hover{
-    color: var(--blue);  
-}
-
-#user-name-2:hover{
-    color: var(--blue);  
-}
-
-#user-name-3:hover{
-    color: var(--blue);  
-}
-
-#user-name-4:hover{
-    color: var(--blue);  
-}
-
-#user-name-5:hover{
-    color: var(--blue);  
-}
-
-#user-name-6:hover{
-    color: var(--blue);  
-}
-
-#user-name-7:hover{
+.user-name:hover{
+    cursor: pointer;
     color: var(--blue);  
 }
 
@@ -166,8 +151,9 @@ body{
 
 .p-mark{
     
-    max-width: 600px;
+    min-width: 550px;
     display: flex;
+    justify-content: space-between;
     gap: 10px;
     
 }
@@ -175,7 +161,7 @@ body{
 .chip{
     width: 10px;
     height: 10px;
-    margin: 5px;
+    margin: 10px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -185,10 +171,12 @@ body{
 
 .notifications{
     margin: 5px;
-    width: 400px;
+    margin-right: 15px;
+    max-width: 500px;
     display: flex;
     align-items:first baseline;
-    flex-wrap:nowrap;
+    flex-wrap: wrap;
+    
 }
 
 #span-chess{
@@ -198,18 +186,20 @@ body{
 }
 
 #span-chess:hover{
+    cursor: pointer;
     color: var(--blue);
 }
 
 #other-span{
     display: flex;
     display: inline;
-    width: 300px;
+    max-width: 300px;
     font-weight: 700;
     color: var(--dark-grayish-blue) ;
 }
 
 #other-span:hover{
+    cursor: pointer;
     color: var(--blue);
 }
 
@@ -237,6 +227,7 @@ body{
 }
 
 #message:hover{
+    cursor: pointer;
     background-color:  var(--light-grayish-blue-2);
 }
 
@@ -244,10 +235,13 @@ body{
     max-width: 60px;
     max-width: 60px;
     display: flex;
-    
     align-self: flex-end;
     margin: 20px;
     cursor: pointer;
 }
 
 /* Add responsive*/
+
+@media (max-width: 375px) {
+
+    }
