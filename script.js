@@ -1,74 +1,113 @@
 const notificationsCounter = document.getElementById("notif-counter");
-
-const markAll = document.querySelector("#mark-all-read");
-
+const markAll = document.getElementById("mark-all-read");
 const cards = document.querySelectorAll(".card");
-
 const chips = document.querySelectorAll(".chip");
+const message = document.getElementById("message");
 
-let counter = 0;
 
-/*Found and create read modify styles and unread attribut */
+let unreadCount = 0;
 
+// Initialise the read status
 function readStatus() {
-  for (let i = 0; i < cards.length; i++) {
-    const card = cards[i];
-
-    markAll.addEventListener("click", (e) => {
-      cards[i].setAttribute("style", "background-color:trensparent;");
-      notificationsCounter.innerText = 0;
-      chips[i].setAttribute("style", "display:none;");
-    });
-
-    if (i <= 2) {
-      /*Add read status attribut*/
-
-      cards[i].dataset.readStatus = "unread";
-      cards[i].classList = "unread, card";
-      cards[i].setAttribute(
-        "style",
-        "background-color:var(--very-light-grayish-blue);"
-      );
-
-      // Counter print unread notifications
-
-      counter = i + 1;
-      notificationsCounter.innerText = counter;
+  cards.forEach((card, index) => {
+    if (index <= 2) {
+      card.dataset.readStatus = "unread";
+      card.classList.add("unread", "card");
+      card.style.backgroundColor = "var(--very-light-grayish-blue)";
+      chips[index].style.display = "block";
+      unreadCount++;
     } else {
-      // Add unread status attribut
-      cards[i].dataset.readStatus = "read";
-
-      let newcounter = counter - 1;
+      card.dataset.readStatus = "read";
     }
-  }
+  });
+
+  updateCounter();
 }
-readStatus();
 
-for (let i = 0; i < chips.length; i++) {
-  const chip = chips[i];
-
-  if (cards[i].dataset.readStatus == "unread") {
-    chips[i].setAttribute("style", "display:block;");
-  }
-  console.log(chips[i]);
+// Update the notification counter
+function updateCounter() {
+  notificationsCounter.innerText = unreadCount;
 }
-function clickChangeReadStatus() {
-  for (let i = 0; i < cards.length; i++) {
-    const element = cards[i];
 
-    /**Add event listener click on cards */
-    cards[i].addEventListener("click", (e) => {
-      if (cards[i].dataset.readStatus === "unread") {
-        cards[i].dataset.readStatus = "read";
-        cards[i].setAttribute("style", "background-color:trensparent;");
-        chips[i].setAttribute("style", "display:none;");
+// Toggle all notifications between read and unread
+function clickMarkAllRead() {
+  markAll.addEventListener("click", () => {
+    const markingAsRead = markAll.id === "mark-all-read"; // Determine the action
 
-        counter = counter - 1;
-        notificationsCounter.innerText = parseInt(counter);
+    cards.forEach((card, index) => {
+      if (markingAsRead) {
+        // Mark all as read
+        card.dataset.readStatus = "read";
+        card.style.backgroundColor = "transparent";
+        chips[index].style.display = "none";
+        messageAboutNotificationStatus();
+      } else {
+        // Mark all as unread
+        card.dataset.readStatus = "unread";
+        card.style.backgroundColor = "var(--very-light-grayish-blue)";
+        chips[index].style.display = "block";
+        messageAboutNotificationStatus();
       }
     });
+
+    // Update the button and counter
+    if (markingAsRead) {
+      // All notifications are read
+      markAll.id = "mark-all-unread";
+      markAll.innerText = "Mark all unread";
+      unreadCount = 0;
+    } else {
+      // All notifications are unread
+      markAll.id = "mark-all-read";
+      markAll.innerText = "Mark all read";
+      unreadCount = cards.length;
+    }
+
+    updateCounter();
+  });
+}
+
+// Change read status of individual notifications
+function clickChangeReadStatus() {
+  cards.forEach((card, index) => {
+    card.addEventListener("click", () => {
+      if (card.dataset.readStatus === "unread") {
+        card.dataset.readStatus = "read";
+        card.style.backgroundColor = "transparent";
+        chips[index].style.display = "none";
+        messageAboutNotificationStatus();
+
+        unreadCount = Math.max(0, unreadCount - 1); // Prevent negative count
+      } else {
+        card.dataset.readStatus = "unread";
+        card.style.backgroundColor = "var(--very-light-grayish-blue)";
+        chips[index].style.display = "block";
+        messageAboutNotificationStatus();
+        unreadCount++;
+      }
+
+      updateCounter();
+    });
+  });
+}
+function messageAboutNotificationStatus() {
+  // Targeting index 3
+  const card = cards[3];
+
+  if (card && card.dataset.readStatus === "unread") {
+    message.style.display = "none";
+  } else {
+    message.style.display = "block";
   }
 }
+
+const modal = document.querySelector(".modal");
+modal.addEventListener("click", (e) => {
+  console.log(e.target);
+});
+// Function calls
+readStatus();
+clickMarkAllRead();
 clickChangeReadStatus();
 
-console.log(notificationsCounter);
+
