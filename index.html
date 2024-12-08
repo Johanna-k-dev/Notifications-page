@@ -16,161 +16,162 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <main>
 
-  <div class="modal-context">
-  <!-- Notifications modal  -->
-    <section class="modal">
-      <!-- Modals title / notifications length/ Mark all as read -->
-        <div class="title-counter-all-read">
-          <div id="title-counter">
-            <h2>Notifications </h2>
-            <!-- insert notification length in JS here -->
-            <p id="notif-counter"></p>
+    <div class="modal-context">
+    <!-- Notifications modal  -->
+      <section class="modal">
+        <!-- Modals title / notifications length/ Mark all as read -->
+          <div class="title-counter-all-read">
+            <div id="title-counter">
+              <h2>Notifications </h2>
+              <!-- insert notification length in JS here -->
+              <p id="notif-counter"></p>
+            </div>
+            <p id="mark-all-read">Mark all as read</p>
           </div>
-          <p id="mark-all-read">Mark all as read</p>
-        </div>
 
-        <!-- Notification article 1 -->
+          <!-- Notification article 1 -->
 
-      <article class="card" id="card-1" >
-        <!-- Avatar image -->
-        <img src="assets/images/avatar-mark-webber.webp" alt="avatar-picture" class="avatar-picture">
-        <!-- Username and "time since receipt" -->
-        <div class="user-name-timer">
-          <h3 class="user-name" id="user-name-1">Mark Webber</h3>
-          <p class="timer">1m ago</p>
-        </div>
-        <!--Content of the notification and read status tag   -->
-        <div class="p-mark">
-          <p class="notifications"style="white-space: nowrap;"> reacted to your recent post <span id="other-span" style="white-space: nowrap;">My first tournament today!</span><span class="chip" id="chip-1" style="display: none;"></span></p>
-          <!-- insert notification chip here -->
-           
-        </div>
-        
-      </article>
-
-      <!-- Notification article 2 -->
-
-      <article class="card" id="card-2" >
-        <!-- Avatar image -->
-        <img src="assets/images/avatar-angela-gray.webp" alt="avatar-picture" class="avatar-picture">
-        <!-- Username and "time since receipt" -->
-        <div class="user-name-timer">
-          <h3 class="user-name" id="user-name-2">Angela Gray</h3> 
-          <p class="timer">5m ago</p>
-        </div>
-        <!--Content of the notification and status tag read  -->
-        <div class="p-mark">
-          <p class="notifications"> followed you<span class="chip" id="chip-2" style="display:none;"></span></p> 
-          <!-- insert notification chip here -->
-          
-        </div>
-      
-      </article>
-
-      <!-- Notification article 3 -->
-
-      <article class="card" id="card-3" >
-        <!-- Avatar image -->
-        <img src="assets/images/avatar-jacob-thompson.webp" alt="avatar-picture" class="avatar-picture">
-        <!-- Username and "time since receipt" -->
-        <div class="user-name-timer">
-          <h3 class="user-name" id="user-name-3">Jacob Thompson</h3>
-          <p class="timer">1 day ago</p>
-        </div>
-        <!--Content of the notification and status tag read  -->
-        <div class="p-mark">
-          <p class="notifications"> has joined your group <span id="span-chess">Chess Club</span><span class="chip" id="chip-3" style="display: none;"></span> </p>
-          <!-- insert notification chip here -->
-          
-        </div>
-      </article>
-
-      <!-- Notification article 4 -->
-
-      <article class="card" id="card-4" >
-        <div class="notif-header">
+        <article class="card" id="card-1" >
           <!-- Avatar image -->
-          <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="avatar-picture" class="avatar-picture">
+          <img src="assets/images/avatar-mark-webber.webp" alt="avatar-picture" class="avatar-picture">
           <!-- Username and "time since receipt" -->
           <div class="user-name-timer">
-            <h3 class="user-name" id="user-name-4">Rizky Hasanuddin</h3>
-            <p class="timer">5 day ago</p>
+            <h3 class="user-name" id="user-name-1">Mark Webber</h3>
+            <p class="timer">1m ago</p>
           </div>
-          <!--Content of the notification and status tag read  -->
+          <!--Content of the notification and read status tag   -->
           <div class="p-mark">
-            <p class="notifications"> sent you a private message<span class="chip" id="chip-4" style="display: none;"></span></p>
+            <p class="notifications"style="white-space: nowrap;"> reacted to your recent post <span id="other-span" style="white-space: nowrap;">My first tournament today!</span><span class="chip" id="chip-1" style="display: none;"style="white-space: nowrap;"></span></p>
             <!-- insert notification chip here -->
             
           </div>
-        </div>
-        <p class="message" id="message">
-          Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-          I'm already having lots of fun and improving my game.
-        </p>
-      </article>
-
-      <!-- Notification article 5 -->
-
-      <article class="card" id="card-5" >
-        <!-- Avatar image -->
-        <img src="assets/images/avatar-kimberly-smith.webp" alt="avatar-picture" class="avatar-picture">
-        <!-- Username and "time since receipt" -->
-        <div class="user-name-timer">
-          <h3 class="user-name" id="user-name-5">Kimberly Smith</h3>
-          <p class="timer">1 week ago</p>
-        </div>
-        <!--Content of the notification and status tag read  -->
-        <div class="p-mark">
-          <p class="notifications"> commented on your picture <span class="chip" id="chip-5" style="display: none;"></span></p>
-          <!-- insert Kimberlys picture here -->
-          <img src="assets/images/image-chess.webp" alt="" id="posted-picture">
-          <!-- insert notification chip here -->
           
-        </div>
-      </article>
+        </article>
 
-      <!-- Notification article 6 -->
+        <!-- Notification article 2 -->
 
-      <article class="card" id="card-6" >
-        <!-- Avatar image -->
-        <img src="assets/images/avatar-nathan-peterson.webp" alt="avatar-picture" class="avatar-picture">
-        <!-- Username and "time since receipt" -->
-        <div class="user-name-timer">
-          <h3 class="user-name" id="user-name-6">Nathan Peterson</h3>
-          <p class="timer"> 2 weeks ago</p>
-        </div>
-        <!--Content of the notification and status tag read  -->
-        <div class="p-mark">
-          <p class="notifications" style="white-space: nowrap;"> reacted to your recent post <span id="other-span" style=" white-space: nowrap;">5 end-game strategies to increase your win rate</span><span class="chip" id="chip-6" style="display: none;"></span></p>
-          <!-- insert notification chip here -->
-          
-        </div>
-      </article>
+        <article class="card" id="card-2" >
+          <!-- Avatar image -->
+          <img src="assets/images/avatar-angela-gray.webp" alt="avatar-picture" class="avatar-picture">
+          <!-- Username and "time since receipt" -->
+          <div class="user-name-timer">
+            <h3 class="user-name" id="user-name-2">Angela Gray</h3> 
+            <p class="timer">5m ago</p>
+          </div>
+          <!--Content of the notification and status tag read  -->
+          <div class="p-mark">
+            <p class="notifications"> followed you<span class="chip" id="chip-2" style="display:none;"style="white-space: nowrap;"></span></p> 
+            <!-- insert notification chip here -->
+            
+          </div>
+        
+        </article>
 
-      <!-- Notification article 7 -->
+        <!-- Notification article 3 -->
 
-      <article class="card" id="card-7" >
-        <!-- Avatar image -->
-        <img src="assets/images/avatar-anna-kim.webp" alt="avatar-picture" class="avatar-picture">
-        <!-- Username and "time since receipt" -->
-        <div class="user-name-timer">
-          <h3 class="user-name" id="user-name-7">Anna Kim</h3>
-          <p class="timer">2 weeks ago</p>
-        </div>
-        <!--Content of the notification and status tag read  -->
-        <div class="p-mark">
-          <p class="notifications"> left the group <span id="span-chess" style="white-space: nowrap;">Chess Club</span><span class="chip" id="chip-7" style="display: none;"></span> </p>
-          <!-- insert notification chip here -->
-          
-        </div>
-      </article>
+        <article class="card" id="card-3" >
+          <!-- Avatar image -->
+          <img src="assets/images/avatar-jacob-thompson.webp" alt="avatar-picture" class="avatar-picture">
+          <!-- Username and "time since receipt" -->
+          <div class="user-name-timer">
+            <h3 class="user-name" id="user-name-3">Jacob Thompson</h3>
+            <p class="timer">1 day ago</p>
+          </div>
+          <!--Content of the notification and status tag read  -->
+          <div class="p-mark">
+            <p class="notifications"> has joined your group <span id="span-chess">Chess Club</span><span class="chip" id="chip-3" style="display: none;"style="white-space: nowrap;"></span> </p>
+            <!-- insert notification chip here -->
+            
+          </div>
+        </article>
 
-    </section>
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Johanna keita</a>.
-  </div>
+        <!-- Notification article 4 -->
+
+        <article class="card" id="card-4" >
+          <div class="notif-header">
+            <!-- Avatar image -->
+            <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="avatar-picture" class="avatar-picture">
+            <!-- Username and "time since receipt" -->
+            <div class="user-name-timer">
+              <h3 class="user-name" id="user-name-4">Rizky Hasanuddin</h3>
+              <p class="timer">5 day ago</p>
+            </div>
+            <!--Content of the notification and status tag read  -->
+            <div class="p-mark">
+              <p class="notifications"> sent you a private message<span class="chip" id="chip-4" style="display: none;"style="white-space: nowrap;"></span></p>
+              <!-- insert notification chip here -->
+              
+            </div>
+          </div>
+          <p class="message" id="message">
+            Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+            I'm already having lots of fun and improving my game.
+          </p>
+        </article>
+
+        <!-- Notification article 5 -->
+
+        <article class="card" id="card-5" >
+          <!-- Avatar image -->
+          <img src="assets/images/avatar-kimberly-smith.webp" alt="avatar-picture" class="avatar-picture">
+          <!-- Username and "time since receipt" -->
+          <div class="user-name-timer">
+            <h3 class="user-name" id="user-name-5">Kimberly Smith</h3>
+            <p class="timer">1 week ago</p>
+          </div>
+          <!--Content of the notification and status tag read  -->
+          <div class="p-mark">
+            <p class="notifications"> commented on your picture <span class="chip" id="chip-5" style="display: none;"style="white-space: nowrap;"></span></p>
+            <!-- insert Kimberlys picture here -->
+            <img src="assets/images/image-chess.webp" alt="" id="posted-picture">
+            <!-- insert notification chip here -->
+            
+          </div>
+        </article>
+
+        <!-- Notification article 6 -->
+
+        <article class="card" id="card-6" >
+          <!-- Avatar image -->
+          <img src="assets/images/avatar-nathan-peterson.webp" alt="avatar-picture" class="avatar-picture">
+          <!-- Username and "time since receipt" -->
+          <div class="user-name-timer">
+            <h3 class="user-name" id="user-name-6">Nathan Peterson</h3>
+            <p class="timer"> 2 weeks ago</p>
+          </div>
+          <!--Content of the notification and status tag read  -->
+          <div class="p-mark">
+            <p class="notifications" style="white-space: nowrap;"> reacted to your recent post <span id="other-span" style=" white-space: nowrap;">5 end-game strategies to increase your win rate</span><span class="chip" id="chip-6" style="display: none;"style="white-space: nowrap;"></span></p>
+            <!-- insert notification chip here -->
+            
+          </div>
+        </article>
+
+        <!-- Notification article 7 -->
+
+        <article class="card" id="card-7" >
+          <!-- Avatar image -->
+          <img src="assets/images/avatar-anna-kim.webp" alt="avatar-picture" class="avatar-picture">
+          <!-- Username and "time since receipt" -->
+          <div class="user-name-timer">
+            <h3 class="user-name" id="user-name-7">Anna Kim</h3>
+            <p class="timer">2 weeks ago</p>
+          </div>
+          <!--Content of the notification and status tag read  -->
+          <div class="p-mark">
+            <p class="notifications"> left the group <span id="span-chess" style="white-space: nowrap;">Chess Club</span><span class="chip" id="chip-7" style="display: none;"style="white-space: nowrap;"></span> </p>
+            <!-- insert notification chip here -->
+          </div>
+        </article>
+
+      </section>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Johanna keita</a>.
+    </div>
+  </main>
 </body>
 </html>
