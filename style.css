@@ -1,0 +1,253 @@
+/* Default styles*/
+
+@font-face {
+    font-family: 'Plusjakarta sans'; 
+    src: url('assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: bolder; /* Optionnel : bold, lighter, etc. */
+    font-style: normal; /* Optionnel : italic, oblique, etc. */
+}
+
+:root {
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-blue: var(--very-dark-blue);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:Plusjakarta sans ;
+    font-weight: 400;
+    max-width: 1440px;
+    padding: 60px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+/*Component styles */
+
+.modal-context{
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    min-width: 1500px;
+    background-color: var(--very-light-grayish-blue);
+}
+
+.modal{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    min-width: 900px;
+    border-radius: 15px;
+    background-color:var(--white) ;
+}
+
+/* Modale content style*/
+
+.title-counter-all-read{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    
+}
+
+#title-counter{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#notif-counter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 23px;
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%) ;
+    background-color: var(--blue);
+}
+
+#mark-all-read{
+    color: var(--grayish-blue);
+    font-weight: bold;
+}
+
+#mark-all-read:hover{
+    color: var(--blue);
+}
+
+/* Article card content */
+
+.card{
+
+    margin: 3px 10px 3px 10px ;
+    padding: 15px;
+    display: flex;
+    gap: 2px;
+    width: 100%;
+    border-radius: 10px;
+    
+}
+
+.avatar-picture{
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+}
+
+.user-name-timer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.user-name{
+    color: var(--dark-grayish-blue);
+}
+
+#user-name-1:hover{
+    color: var(--blue);  
+}
+
+#user-name-2:hover{
+    color: var(--blue);  
+}
+
+#user-name-3:hover{
+    color: var(--blue);  
+}
+
+#user-name-4:hover{
+    color: var(--blue);  
+}
+
+#user-name-5:hover{
+    color: var(--blue);  
+}
+
+#user-name-6:hover{
+    color: var(--blue);  
+}
+
+#user-name-7:hover{
+    color: var(--blue);  
+}
+
+.timer{
+    color: var(--grayish-blue);
+    font-weight: bold;
+}
+
+.p-mark{
+    
+    max-width: 600px;
+    display: flex;
+    gap: 10px;
+    
+}
+
+.chip{
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: var(--red);
+}
+
+.notifications{
+    margin: 5px;
+    width: 400px;
+    display: flex;
+    align-items:first baseline;
+    flex-wrap:nowrap;
+}
+
+#span-chess{
+    display: inline;
+    font-weight: 800;
+    color: var(--dark-grayish-blue);
+}
+
+#span-chess:hover{
+    color: var(--blue);
+}
+
+#other-span{
+    display: flex;
+    display: inline;
+    width: 300px;
+    font-weight: 700;
+    color: var(--dark-grayish-blue) ;
+}
+
+#other-span:hover{
+    color: var(--blue);
+}
+
+/*Particular styles*/
+
+#card-4{ 
+    display: flex;
+    flex-direction: column;
+}
+
+.notif-header{
+    display: flex;
+    gap: 10px;
+}
+
+#message{
+    max-width: 545px;
+    margin: 10px;
+    padding: 15px;
+    border: solid 2px  var(--light-grayish-blue-2);
+    display: flex;
+    align-self: flex-end;
+    border-radius: 10px;
+    
+}
+
+#message:hover{
+    background-color:  var(--light-grayish-blue-2);
+}
+
+#posted-picture{
+    max-width: 60px;
+    max-width: 60px;
+    display: flex;
+    
+    align-self: flex-end;
+    margin: 20px;
+    cursor: pointer;
+}
+
+/* Add responsive*/
